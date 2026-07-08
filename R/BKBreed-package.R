@@ -6,20 +6,20 @@
 #'
 #' @section Experimental designs:
 #' \itemize{
-#'   \item \code{\link{bk_rbd}} — Randomised Block Design
-#'   \item \code{\link{bk_frbd}} — two-factor Factorial RBD
-#'   \item \code{\link{bk_augmented}} — Augmented Alpha-Lattice / Augmented RCBD
+#'   \item \code{\link{bk_rbd}} - Randomised Block Design
+#'   \item \code{\link{bk_frbd}} - two-factor Factorial RBD
+#'   \item \code{\link{bk_augmented}} - Augmented Alpha-Lattice / Augmented RCBD
 #' }
 #'
 #' @section Biometrical genetics:
 #' \itemize{
-#'   \item \code{\link{bk_variability}} — GCV, PCV, heritability, genetic advance
-#'   \item \code{\link{bk_correlation}} — genotypic & phenotypic correlation
-#'   \item \code{\link{bk_path}} — path-coefficient analysis
-#'   \item \code{\link{bk_lxt}} — Line x Tester combining ability (GCA/SCA)
-#'   \item \code{\link{bk_diallel}} — Griffing diallel (Method 2, Model I)
-#'   \item \code{\link{bk_diversity}} — Mahalanobis D-square + Tocher / Ward
-#'   \item \code{\link{bk_stability}} — Eberhart-Russell & AMMI (MLT)
+#'   \item \code{\link{bk_variability}} - GCV, PCV, heritability, genetic advance
+#'   \item \code{\link{bk_correlation}} - genotypic & phenotypic correlation
+#'   \item \code{\link{bk_path}} - path-coefficient analysis
+#'   \item \code{\link{bk_lxt}} - Line x Tester combining ability (GCA/SCA)
+#'   \item \code{\link{bk_diallel}} - Griffing diallel (Method 2, Model I)
+#'   \item \code{\link{bk_diversity}} - Mahalanobis D-square + Tocher / Ward
+#'   \item \code{\link{bk_stability}} - Eberhart-Russell & AMMI (MLT)
 #' }
 #'
 #' @section Figures:

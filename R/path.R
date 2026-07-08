@@ -74,7 +74,7 @@ bk_plot.bk_path <- function(x, ...) {
   ggplot2::ggplot(long, ggplot2::aes(.data$cause, .data$via,
                                      fill = .data$value)) +
     ggplot2::geom_tile(colour = "white", linewidth = 0.8) +
-    ggplot2::geom_tile(data = subset(long, .data$type == "direct"),
+    ggplot2::geom_tile(data = long[long$type == "direct", , drop = FALSE],
                        colour = "#1A1A1A", linewidth = 1.1, fill = NA) +
     ggplot2::geom_text(ggplot2::aes(label = formatC(.data$value, format = "f",
                                                     digits = 2)),

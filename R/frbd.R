@@ -93,7 +93,7 @@ bk_plot.bk_frbd <- function(x, ...) {
     ggplot2::geom_point(size = 3.2) +
     scale_colour_bk("sunrise", name = x$factorB) +
     ggplot2::labs(
-      title = paste0("Factorial RBD interaction — ", x$trait),
+      title = paste0("Factorial RBD interaction - ", x$trait),
       subtitle = paste0(x$factorA, " x ", x$factorB,
                         "   CD(int) = ", round(x$cd$AB, 2),
                         "   CV% = ", round(x$cv, 1)),

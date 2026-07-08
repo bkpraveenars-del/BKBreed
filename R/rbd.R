@@ -95,7 +95,7 @@ bk_plot.bk_rbd <- function(x, ...) {
                                   name = x$trait) +
     ggplot2::scale_x_continuous(expand = ggplot2::expansion(mult = c(0, 0.12))) +
     ggplot2::labs(
-      title = paste0("RBD genotype means — ", x$trait),
+      title = paste0("RBD genotype means - ", x$trait),
       subtitle = paste0("CD(", x$alpha, ") = ", round(x$cd, 2),
                         "   CV% = ", round(x$cv, 1),
                         "   letters share = non-significant"),

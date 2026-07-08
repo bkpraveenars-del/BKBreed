@@ -4,3 +4,6 @@
 ^\.git$
 ^\.gitignore$
 ^BKBreed_figures$
+^cran-comments\.md$
+^BKBreed\.Rcheck$
+^BKBreed_.*\.tar\.gz$

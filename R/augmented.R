@@ -157,7 +157,7 @@ bk_plot.bk_augmented <- function(x, ...) {
                       label = "check mean", hjust = -0.05, vjust = 1,
                       colour = "#B5341C", size = 3) +
     ggplot2::labs(
-      title = paste0(x$design, " — adjusted means"),
+      title = paste0(x$design, " - adjusted means"),
       subtitle = paste0(x$trait, "   CV% = ", round(x$cv, 1),
                         "   error df = ", x$edf),
       x = paste0("block-adjusted ", x$trait), y = NULL,

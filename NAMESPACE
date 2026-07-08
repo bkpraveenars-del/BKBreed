@@ -49,7 +49,7 @@ S3method(bk_plot, bk_diallel)
 
 importFrom(stats, aov, anova, as.formula, coef, cor, lm, na.omit, pf, pt,
            qt, quantile, sd, var, cmdscale, hclust, as.dist, dist, predict,
-           model.matrix, terms)
+           model.matrix, terms, setNames)
 importFrom(utils, read.csv, combn, head)
 importFrom(grDevices, colorRampPalette)
 import(ggplot2)

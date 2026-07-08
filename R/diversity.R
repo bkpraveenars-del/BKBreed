@@ -160,7 +160,7 @@ bk_plot.bk_diversity <- function(x, ...) {
     scale_colour_bk("sunrise", name = "cluster") +
     scale_fill_bk("sunrise") +
     ggplot2::labs(
-      title = "Genetic divergence — principal coordinates of D-square",
+      title = "Genetic divergence - principal coordinates of D-square",
       subtitle = paste0(x$method, " clustering, ", x$n_cluster,
                         " clusters   |   avg D2 = ", round(x$avg_D2, 1)),
       x = "PCo 1", y = "PCo 2", caption = "BKBreed") +

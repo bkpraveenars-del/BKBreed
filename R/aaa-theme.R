@@ -84,15 +84,16 @@ theme_bk <- function(base_size = 12, base_family = "", grid = TRUE) {
 
 #' Discrete BKBreed colour and fill scales
 #'
-#' @param name BKBreed palette name (see \code{\link{bk_palette}}).
+#' @param pal_name BKBreed palette name (see \code{\link{bk_palette}}).
 #' @param reverse Logical; reverse the palette.
-#' @param ... Passed to \code{ggplot2::discrete_scale}.
+#' @param ... Passed to \code{ggplot2::discrete_scale} (e.g. \code{name} for the
+#'   legend title).
 #' @return A ggplot2 scale.
 #' @rdname bk_scales
 #' @export
-scale_colour_bk <- function(name = "sunrise", reverse = FALSE, ...) {
-  pal <- function(n) bk_palette(name, n = n, reverse = reverse)
-  ggplot2::discrete_scale("colour", palette = pal, ...)
+scale_colour_bk <- function(pal_name = "sunrise", reverse = FALSE, ...) {
+  f <- function(n) bk_palette(pal_name, n = n, reverse = reverse)
+  ggplot2::discrete_scale("colour", palette = f, ...)
 }
 
 #' @rdname bk_scales
@@ -101,7 +102,7 @@ scale_color_bk <- scale_colour_bk
 
 #' @rdname bk_scales
 #' @export
-scale_fill_bk <- function(name = "sunrise", reverse = FALSE, ...) {
-  pal <- function(n) bk_palette(name, n = n, reverse = reverse)
-  ggplot2::discrete_scale("fill", palette = pal, ...)
+scale_fill_bk <- function(pal_name = "sunrise", reverse = FALSE, ...) {
+  f <- function(n) bk_palette(pal_name, n = n, reverse = reverse)
+  ggplot2::discrete_scale("fill", palette = f, ...)
 }
