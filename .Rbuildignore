@@ -1,0 +1,6 @@
+^data-raw$
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.git$
+^\.gitignore$
+^BKBreed_figures$
