@@ -1,3 +1,10 @@
+# BKBreed 0.3.1
+
+* Wrapped the `\usage` line in `bk_diversity.Rd` to satisfy the Rd line-width
+  check (CRAN incoming pre-test); no user-visible change.
+* Added `inst/WORDLIST` documenting the plant-breeding terms flagged by the
+  spell checker (all correct).
+
 # BKBreed 0.3.0
 
 * New `bk_diallel()` — Griffing (1956) diallel analysis, Method 2 (parents +

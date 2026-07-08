@@ -1,3 +1,15 @@
+## Resubmission (0.3.1)
+
+This resubmission fixes the one actionable NOTE from the CRAN incoming
+pre-test: an over-long `\usage` line in `bk_diversity.Rd` has been wrapped so
+that all Rd usage lines are <= 90 characters.
+
+The remaining NOTE ("Possibly misspelled words in DESCRIPTION": AMMI,
+Biometrical, Eberhart, GCA, Griffing, PCV, RBD, SCA, Tocher, biometrical,
+diallel, heritability, intra) lists standard plant-breeding and biometry
+terms and author surnames, all spelled correctly. They are documented in
+inst/WORDLIST.
+
 ## Submission summary
 
 This is a new submission of BKBreed, a small, dependency-light toolkit for
@@ -16,10 +28,16 @@ Eberhart-Russell / AMMI stability), with publication-ready ggplot2 figures.
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 notes on the local run.
+Local (Windows 11, R 4.6.0): 0 errors | 0 warnings | 0 notes.
+win-builder R-devel: 0 errors | 0 warnings | 2 notes.
 
-On first CRAN submission a single NOTE is expected:
-  "New submission" (this package is not yet on CRAN).
+The two NOTEs on win-builder are the expected pair for a new package:
+
+* "New submission" - BKBreed is not yet on CRAN.
+* "Possibly misspelled words in DESCRIPTION" - the flagged words
+  (biometrical, genotypic, phenotypic, heritability, GCV, PCV, Eberhart,
+  Mahalanobis, Tocher, AMMI, GCA, SCA) are standard plant-breeding and
+  biometry terms and are spelled correctly.
 
 ## Notes for CRAN
 

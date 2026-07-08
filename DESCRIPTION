@@ -1,7 +1,7 @@
 Package: BKBreed
 Type: Package
 Title: Colourful Biometrical Analysis for Plant Breeding and Genetics
-Version: 0.3.0
+Version: 0.3.1
 Authors@R: person(given = "Praveen Kumar",
                    family = "B. K.",
                    role = c("aut", "cre"),
