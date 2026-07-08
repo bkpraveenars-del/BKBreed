@@ -47,6 +47,26 @@ test_that("stability: mean bi equals 1", {
   expect_s3_class(bk_plot(st, "ammi2"), "ggplot")
 })
 
+test_that("line x tester: GCA effects sum to zero, contributions to 100", {
+  res <- bk_lxt(bk_data("lxt"), "grain_yield", "line", "tester", "rep")
+  expect_equal(sum(res$gca_lines$gca), 0, tolerance = 1e-6)
+  expect_equal(sum(res$gca_testers$gca), 0, tolerance = 1e-6)
+  expect_equal(sum(res$contribution), 100, tolerance = 1e-6)
+  expect_s3_class(bk_plot(res, "gca"), "ggplot")
+  expect_s3_class(bk_plot(res, "sca"), "ggplot")
+})
+
+test_that("diallel: GCA sums to zero and SS partitions", {
+  res <- bk_diallel(bk_data("diallel"), "grain_yield",
+                    "parent1", "parent2", "rep")
+  expect_equal(sum(res$gca$gca), 0, tolerance = 1e-6)
+  expect_equal(res$sca, t(res$sca), tolerance = 1e-8)   # symmetric
+  ss <- res$anova$SS
+  expect_true(res$baker >= 0 && res$baker <= 1)
+  expect_s3_class(bk_plot(res, "gca"), "ggplot")
+  expect_s3_class(bk_plot(res, "sca"), "ggplot")
+})
+
 test_that("augmented analysis adjusts means with positive error df", {
   a <- bk_augmented(bk_data("augmented"), "grain_yield", "genotype",
                     "block", "rep", checks = paste0("CHK-", 1:4))

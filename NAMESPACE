@@ -9,6 +9,8 @@ export(bk_correlation)
 export(bk_path)
 export(bk_diversity)
 export(bk_stability)
+export(bk_lxt)
+export(bk_diallel)
 
 # ---- helpers / data / theme ----
 export(bk_data)
@@ -30,6 +32,8 @@ S3method(print, bk_correlation)
 S3method(print, bk_path)
 S3method(print, bk_diversity)
 S3method(print, bk_stability)
+S3method(print, bk_lxt)
+S3method(print, bk_diallel)
 
 # ---- S3 methods: bk_plot ----
 S3method(bk_plot, bk_rbd)
@@ -40,6 +44,8 @@ S3method(bk_plot, bk_correlation)
 S3method(bk_plot, bk_path)
 S3method(bk_plot, bk_diversity)
 S3method(bk_plot, bk_stability)
+S3method(bk_plot, bk_lxt)
+S3method(bk_plot, bk_diallel)
 
 importFrom(stats, aov, anova, as.formula, coef, cor, lm, na.omit, pf, pt,
            qt, quantile, sd, var, cmdscale, hclust, as.dist, dist, predict,

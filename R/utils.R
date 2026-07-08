@@ -98,18 +98,23 @@
 #' @param name One of \code{"rbd"} (pearl-millet multi-trait RBD),
 #'   \code{"frbd"} (nitrogen x variety factorial RBD),
 #'   \code{"augmented"} (augmented alpha-lattice with 4 checks + 20 test entries),
-#'   \code{"mlt"} (10 genotypes x 5 environments multi-location trial).
+#'   \code{"mlt"} (10 genotypes x 5 environments multi-location trial),
+#'   \code{"lxt"} (5 lines x 3 testers line x tester crosses),
+#'   \item \code{"diallel"} (6-parent half diallel: parents + F1s, 3 reps).
 #' @return A \code{data.frame}.
 #' @examples
 #' head(bk_data("rbd"))
 #' @export
-bk_data <- function(name = c("rbd", "frbd", "augmented", "mlt")) {
+bk_data <- function(name = c("rbd", "frbd", "augmented", "mlt", "lxt",
+                             "diallel")) {
   name <- match.arg(name)
   file <- switch(name,
     rbd       = "pearlmillet_rbd.csv",
     frbd      = "factorial_rbd.csv",
     augmented = "augmented_alpha.csv",
-    mlt       = "mlt_stability.csv")
+    mlt       = "mlt_stability.csv",
+    lxt       = "linextester.csv",
+    diallel   = "diallel.csv")
   path <- system.file("extdata", file, package = "BKBreed")
   if (path == "") stop("Example data '", file, "' not found. Is BKBreed installed?")
   utils::read.csv(path, stringsAsFactors = FALSE)

@@ -46,6 +46,20 @@ dv <- bk_diversity(bk_data("rbd"), traits = traits,
                    gen = "genotype", rep = "rep")
 print(dv); sav(bk_plot(dv), "07_diversity.png")
 
+## 7b. Line x Tester combining ability ---------------------------------------
+lxt <- bk_lxt(bk_data("lxt"), trait = "grain_yield",
+              line = "line", tester = "tester", rep = "rep")
+print(lxt)
+sav(bk_plot(lxt, type = "gca"), "07b_lxt_gca.png")
+sav(bk_plot(lxt, type = "sca"), "07c_lxt_sca.png", w = 6.5, h = 5.5)
+
+## 7d. Griffing diallel ------------------------------------------------------
+dia <- bk_diallel(bk_data("diallel"), trait = "grain_yield",
+                  parent1 = "parent1", parent2 = "parent2", rep = "rep")
+print(dia)
+sav(bk_plot(dia, type = "gca"), "07d_diallel_gca.png")
+sav(bk_plot(dia, type = "sca"), "07e_diallel_sca.png", w = 6.5, h = 5.5)
+
 ## 8. GxE stability (MLT) ----------------------------------------------------
 st <- bk_stability(bk_data("mlt"), trait = "grain_yield",
                    gen = "genotype", env = "environment", rep = "rep")

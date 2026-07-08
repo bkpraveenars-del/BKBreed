@@ -1,7 +1,7 @@
 Package: BKBreed
 Type: Package
 Title: Colourful Biometrical Analysis for Plant Breeding and Genetics
-Version: 0.1.0
+Version: 0.3.0
 Authors@R: person(given = "Praveen Kumar",
                    family = "B. K.",
                    role = c("aut", "cre"),
@@ -12,7 +12,9 @@ Description: A compact, colour-first toolkit for the analysis of plant breeding
     intra-block analysis for Augmented Alpha-Lattice designs, and the core
     biometrical-genetics workflow used in crop improvement: estimation of
     genetic variability (GCV, PCV, heritability, genetic advance), genotypic
-    and phenotypic correlation, path-coefficient analysis, Mahalanobis D-square
+    and phenotypic correlation, path-coefficient analysis, Line x Tester
+    combining-ability analysis (GCA/SCA) and Griffing diallel analysis,
+    Mahalanobis D-square
     genetic-divergence analysis with Tocher and hierarchical clustering, and
     genotype-by-environment stability analysis (Eberhart-Russell regression and
     Additive Main effects and Multiplicative Interaction, AMMI). Every analysis

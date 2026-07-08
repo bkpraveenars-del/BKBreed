@@ -24,6 +24,8 @@ augmented (unreplicated) designs that balanced-only packages cannot.**
 | Genetic variability (GCV, PCV, h², GA) | `bk_variability()` | GCV vs PCV bars + heritability |
 | Genotypic & phenotypic correlation | `bk_correlation()` | diverging correlation heatmap |
 | Path-coefficient analysis | `bk_path()` | direct/indirect effect matrix |
+| Line × Tester combining ability | `bk_lxt()` | GCA effect bars + SCA heatmap |
+| Griffing diallel (Method 2, Model I) | `bk_diallel()` | GCA effect bars + SCA heatmap |
 | Mahalanobis D² divergence | `bk_diversity()` | D² principal-coordinate clusters |
 | G×E stability (Eberhart-Russell + AMMI) | `bk_stability()` | AMMI-2 biplot & E-R plot |
 
