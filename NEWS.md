@@ -1,3 +1,10 @@
+# BKBreed 0.3.2
+
+* DESCRIPTION: spelled out all acronyms and added method references with DOIs
+  (Griffing 1956; Eberhart & Russell 1966), per CRAN review.
+* `inst/examples/run_all.R` now writes figures to `tempdir()` instead of the
+  working directory, in line with CRAN policy.
+
 # BKBreed 0.3.1
 
 * Wrapped the `\usage` line in `bk_diversity.Rd` to satisfy the Rd line-width

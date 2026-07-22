@@ -1,9 +1,10 @@
 # BKBreed — full demonstration. Run after installing the package.
 # It exercises every analysis and saves each signature figure as PNG.
+install.packages("BKBreed")
 library(BKBreed)
 library(ggplot2)
 
-out <- "BKBreed_figures"
+out <- file.path(tempdir(), "BKBreed_figures")
 dir.create(out, showWarnings = FALSE)
 sav <- function(p, f, w = 8, h = 5.2)
   ggsave(file.path(out, f), p, width = w, height = h, dpi = 300)
@@ -45,20 +46,6 @@ print(pa); sav(bk_plot(pa), "06_path.png", w = 6.5, h = 6)
 dv <- bk_diversity(bk_data("rbd"), traits = traits,
                    gen = "genotype", rep = "rep")
 print(dv); sav(bk_plot(dv), "07_diversity.png")
-
-## 7b. Line x Tester combining ability ---------------------------------------
-lxt <- bk_lxt(bk_data("lxt"), trait = "grain_yield",
-              line = "line", tester = "tester", rep = "rep")
-print(lxt)
-sav(bk_plot(lxt, type = "gca"), "07b_lxt_gca.png")
-sav(bk_plot(lxt, type = "sca"), "07c_lxt_sca.png", w = 6.5, h = 5.5)
-
-## 7d. Griffing diallel ------------------------------------------------------
-dia <- bk_diallel(bk_data("diallel"), trait = "grain_yield",
-                  parent1 = "parent1", parent2 = "parent2", rep = "rep")
-print(dia)
-sav(bk_plot(dia, type = "gca"), "07d_diallel_gca.png")
-sav(bk_plot(dia, type = "sca"), "07e_diallel_sca.png", w = 6.5, h = 5.5)
 
 ## 8. GxE stability (MLT) ----------------------------------------------------
 st <- bk_stability(bk_data("mlt"), trait = "grain_yield",

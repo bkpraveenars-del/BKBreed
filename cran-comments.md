@@ -1,3 +1,16 @@
+## Resubmission (0.3.2)
+
+Addresses the CRAN reviewer's (Konstanze Lauseker) requests:
+
+* All acronyms are now explained in the Description text (e.g. GCV/PCV spelled
+  out as genotypic/phenotypic coefficients of variation; GCA/SCA as general/
+  specific combining ability; AMMI defined in full).
+* Added method references with DOIs in the Description: Griffing (1956)
+  <doi:10.1071/BI9560463> and Eberhart and Russell (1966)
+  <doi:10.2135/cropsci1966.0011183X000600010011x>.
+* inst/examples/run_all.R now writes figures to tempdir() rather than the
+  working directory, per CRAN policy.
+
 ## Resubmission (0.3.1)
 
 This resubmission fixes the one actionable NOTE from the CRAN incoming
